@@ -1,0 +1,198 @@
+.plans-container {
+    margin-top: 40px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+.plans {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    background: var(--caloryCard);
+    color: white;
+    gap: 20px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+}
+
+.plan:nth-child(2) {
+    background: var(--planCard);
+    transform: scale(1.1);
+}
+
+.plan > svg {
+    fill: var(--orange);
+    width: 24px;
+    height: 24px;
+}
+
+.plan:nth-child(2) > svg {
+    fill: white;
+}
+
+.plan > :nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.plan > :nth-child(3) {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.plan > :nth-child(5) {
+    font-size: 15px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature > img {
+    width: 15px;
+}
+
+.btn {
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plan:nth-child(2) .btn {
+    background: white;
+    color: var(--orange);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.plans-blur-1{
+    width: 320px;
+    height: 230px;
+    top: 60px;
+    left: 0;
+}
+
+.plans-blur-2{
+    width: 320px;
+    height: 230px;
+    top: 100px;
+    right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .plans-container {
+        margin-top: 30px;
+        padding: 0 20px;
+        gap: 30px;
+        overflow-x: hidden;
+    }
+
+    .plans {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .plan {
+        width: calc(100% - 20px);
+        max-width: 280px;
+        margin: 0;
+        gap: 15px;
+        padding: 20px 15px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .plan:nth-child(2) {
+        transform: none;
+        order: -1;
+        border: 2px solid var(--orange);
+    }
+
+    .plan > svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .plan > :nth-child(2) {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .plan > :nth-child(3) {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .plan > :nth-child(5) {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .features {
+        gap: 8px;
+    }
+
+    .feature {
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .feature > img {
+        width: 14px;
+        flex-shrink: 0;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .plans-blur-1 {
+        width: 200px;
+        height: 150px;
+        top: 40px;
+        left: -50px;
+        opacity: 0.7;
+    }
+
+    .plans-blur-2 {
+        width: 200px;
+        height: 150px;
+        top: 80px;
+        right: -50px;
+        opacity: 0.7;
+    }
+}

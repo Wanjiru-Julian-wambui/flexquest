@@ -1,0 +1,115 @@
+.reviews{
+    display: flex;
+    gap: 10px;
+    padding: 0 20px; 
+}
+
+.left-re{
+    display: flex;
+    flex: 1 1;
+    gap: 20px;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: white;
+}
+
+.left-re>:nth-child(1){
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.left-re>:nth-child(2),
+.left-re>:nth-child(3){
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.left-re>:nth-child(4){
+    text-transform: none;
+    text-align: justify;
+    letter-spacing: 3px;
+    line-height: 40px;
+}
+
+.right-re{
+    flex: 1;
+    position: relative;
+}
+
+.right-re>img{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    right: 150px;
+    top: 60px;
+}
+
+.right-re>:nth-child(1){
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    border: 2px solid orange;
+    background-color: transparent;
+    right: 160px;
+    top: 40px;
+}
+
+.right-re>:nth-child(2){
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    background: var(--planCard);
+    top: 70px;
+    right: 140px;
+}
+
+.arrows{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 1px;
+    left: 150px;
+}
+
+.arrows>img{
+    width: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .reviews{
+        flex-direction: column;
+    }
+
+    .left-re>:nth-child(2),
+    .left-re>:nth-child(3){
+        font-size: xx-large
+    }
+
+    .right-re{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .right-re>div{
+        position: relative;
+        display: none;
+    }
+
+    .right-re>img{
+        top: 0;
+        right: 0;
+        position: relative;
+        align-self: center;
+    }
+
+    .right-re>:last-child{
+        display: block;
+        bottom: 0;
+        left: 0;   
+    }
+}

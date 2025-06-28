@@ -1,0 +1,180 @@
+.Reasons{
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+
+}
+
+.left-r{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: 1fr;
+}
+
+.left-r>img{
+    object-fit: cover;
+} 
+
+.left-r>:nth-child(1){
+    width: 200px;
+    grid-row: 1/3;
+    height: 500px;
+}
+
+.left-r>:nth-child(2){
+    width: auto;
+    height: 250px;
+    grid-column: 2/4;
+}
+
+.left-r>:nth-child(3){
+    width: 210px; 
+    grid-column: 2/3;  
+    grid-row: 2;
+    height: 240px;
+}
+
+.left-r>:nth-child(4){
+    width: 170px;
+    grid-row: 2;
+    grid-column: 3/4;
+    height: 240px;
+}
+
+.right-r{
+    flex: 1 1;
+    text-transform: uppercase;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-r>span{
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.right-r>div{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.details-r{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details-r>div{
+    display: flex;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.details-r>div>img{
+    width: 20px;
+    height: 20px;
+}
+
+.details-r>div>span{
+    text-transform: uppercase;
+}
+
+.partners{
+    display: flex;
+    gap: 10px;
+}
+
+.partners>img{
+    width: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .Reasons {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .left-r {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 8px;
+        order: 2;
+    }
+
+    .left-r > img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .left-r > :nth-child(1) {
+        grid-column: 1/3;
+        grid-row: 1;
+        height: 200px;
+        width: 100%;
+    }
+
+    .left-r > :nth-child(2) {
+        grid-column: 1/3;
+        grid-row: 2;
+        height: 180px;
+        width: 100%;
+    }
+
+    .left-r > :nth-child(3) {
+        grid-column: 1/2;
+        grid-row: 3;
+        height: 150px;
+        width: 100%;
+    }
+
+    .left-r > :nth-child(4) {
+        grid-column: 2/3;
+        grid-row: 3;
+        height: 150px;
+        width: 100%;
+    }
+
+    .right-r {
+        order: 1;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .right-r > div {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .details-r {
+        gap: 15px;
+        text-align: left;
+    }
+
+    .details-r > div {
+        font-size: 16px;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .details-r > div > img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .partners {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .partners > img {
+        width: 50px;
+    }
+}
